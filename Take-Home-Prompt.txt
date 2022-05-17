@@ -1,0 +1,26 @@
+Take Home Prompt 
+
+Background 
+As part of our daily system operations we have a background job that creates orders based on order templates. Every day the job runs and adds any available inventory to the order. At Crafty we prioritize fulfillment but sometimes we run out of stock of a particular item. In order to achieve a better fulfillment rate we want to set up the idea of a ‘product chain’, which allows us to grab another product to replace any out of stock products on these orders. The procurement team at Crafty sets up these product chains to make sure we have similar products as a backup. 
+Expectations 
+Please do not spend more than a few hours before your interview preparing for this prompt. You may bring to the interview any diagrams, pseudo code, questions or other materials to assist you with the discussion and prompt questions. You can use whatever programming language you are most comfortable with but we’re looking for code that is clean, readable, performant, and maintainable. 
+
+Prompt 
+Say we have a company called Drafty that has an order that recurs every 15th of the month for twenty cases of Lime LaCroix and ten cases of Cheetos. 
+Unfortunately at the time this order is being created we only have fourteen cases of Lime LaCroix and one case of Cheetos but we do have "product chains" set up to use Lemon LaCroix as a backup for the Lime LaCroix and Fritos as a backup for the Cheetos. 
+Can you write a function that given needed products for an order, available inventory for every product, and a set of product chains for certain products will add products to an order taking into account these product chains and optimizing for fulfillment? The function should return both the quantity of products added to the order and updated available inventory. 
+
+Assumptions: 
+You do not need to write the function for actually adding inventory to the order, assume the function signature is something like add_product_to_order(product_id, amount). 
+The actual inventory could be much larger than the inventory map provided below, assume there is some other logic that figures out how to get only relevant inventory to pass into your function.
+The inventory map below is not in any specific order, you will need to come up with your own way of representing how the product chains are represented. 
+
+Product ID 51 = Lime LaCroix 
+Product ID 88 = Cheetos 
+Product ID 109 = Lemon LaCroix 
+Product ID 343 = Fritos 
+
+Inventory Map = { 51 => 14, 88 => 1, 109 => 5, 343 => 500 } 
+Needed Products Map = { 51 => 20, 88 => 10 } 
+
+If there are any additional assumptions you are making please make note of those.
