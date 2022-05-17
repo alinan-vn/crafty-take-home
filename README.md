@@ -77,9 +77,9 @@ The `index.js` file within the app folder runs our orders. We have three orders 
 
 # Nice-to-haves (extra potential implementations)
 1. Run out of alternatives?
-    - If for some reason all of the alternatives do not have inventory to fill an order, an extra step here would be to simply check if there are other items similar enough to be used as an alternative.
+    - If, for some reason, all of the alternatives do not have inventory to fill an order, an extra step here would be to simply check if there are other items similar enough to be used as an alternative.
     - For example, if all the alternatives for Lime Lacroix are gone, another fizzy, low calorie, non-alcoholic drink should be good enough as a replacement. Here we could write another function that runs in this case where we filter our food-data to return only drinks that have the types 'fizzy', 'low calorie', and 'non-alcoholic'and then filter through those inventories until that order is filled
-    - The reason why I chose not to do that from the start is that Lime and Lemon are similar flavors while Lime and Orange aren't. Therefore I think it makes sense to have a column of custom/hard-coded alternatives that can always be altered by hand later and using the random "close enough" method as a last option
+    - The reason why I chose not to do that as the default is that Lime and Lemon are similar flavors while Lime and Orange aren't. Therefore, I think it makes sense to have a column of custom/hard-coded alternatives that can always be altered by hand later and using the random "close enough" method as a last option
 2. The `process-order.js' file
-    - The functions within could probably be refactored/optimized further.
+    - The functions within can be refactored/optimized further depending on preference and/or company standards.
     - Also the functions could have been separated into separate files to reduce the number of lines of code per file, however, since this is small project I decided that having most of the work done in a file would be fine since it still ended up being less than 200 lines of code
